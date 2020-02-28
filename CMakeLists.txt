@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( tachCBTU )
+find_package( OpenCV REQUIRED )
+add_executable( tachCBTU main.cpp libCBTU.cpp libCBTU.h main.cpp)
+target_link_libraries( tachCBTU ${OpenCV_LIBS} )
+set_property(TARGET tachCBTU PROPERTY CXX_STANDARD 11)
